@@ -10,6 +10,7 @@ public class WallChecker : MonoBehaviour
     public GameObject debugsquare;
     public int width = 26;
     public int height = 36;
+    public bool debugIt = false;
     Vector2 startingGridCord = new Vector2(-13.5f, 15.5f);
     Vector2 currentGridCord;
 
@@ -26,7 +27,8 @@ public class WallChecker : MonoBehaviour
                 if (Physics2D.OverlapCircle(currentGridCord, overlapCheckRadius))
                 {
                     grid[i, j] = Tiletype.illegal;
-                    //Instantiate(debugsquare, currentGridCord, Quaternion.identity);
+                    if (debugIt == true)
+                        Instantiate(debugsquare, currentGridCord, Quaternion.identity);
                 }
                 else
                 {
