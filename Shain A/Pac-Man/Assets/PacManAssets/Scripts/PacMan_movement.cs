@@ -49,12 +49,12 @@ public class PacMan_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Horizontal") >= deadzone)
+        if (Input.GetAxis("Horizontal") <= deadzone)
         {
             moveDirection = moveDir.LEFT;
         }
         
-        if (Input.GetAxis("Horizontal") <= -deadzone)
+        if (Input.GetAxis("Horizontal") >= -deadzone)
         {
             moveDirection = moveDir.RIGHT;
         }
@@ -78,24 +78,46 @@ public class PacMan_movement : MonoBehaviour
         {
             case moveDir.UP:
 
-                
+                if (walls.grid[currentColumb, nextRow] == WallChecker.Tiletype.legale)
+                {
+                    pos.y += 1f;
+                    currentRow += 1;
+                    nextRow += 1;
+                }
 
                 break;
             case moveDir.DOWN:
 
-
+                if (walls.grid[currentColumb, nextRow] == WallChecker.Tiletype.legale)
+                {
+                    pos.y -= 1f;
+                    currentRow -= 1;
+                    nextRow -= 1;
+                }
 
                 break;
             case moveDir.RIGHT:
 
-
+                if (walls.grid[nextColumb, currentRow] == WallChecker.Tiletype.legale)
+                {
+                    pos.x -= 1f;
+                    currentColumb -= 1;
+                    nextColumb -= 1;
+                }
 
                 break;
             case moveDir.LEFT:
 
-
+                if (walls.grid[nextColumb, currentRow] == WallChecker.Tiletype.legale)
+                {
+                    pos.x += 1f;
+                    currentColumb += 1;
+                    nextColumb += 1;
+                }
 
                 break;
         }
+
+        tForm.position = pos;
     }
 }
