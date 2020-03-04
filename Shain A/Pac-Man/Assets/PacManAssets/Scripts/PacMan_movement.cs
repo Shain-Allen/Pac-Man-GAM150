@@ -9,8 +9,8 @@ public class PacMan_movement : MonoBehaviour
     public float deadzone = 0.1f;
 
 
-    int startingRow = 17;
-    int startingColumb = 14;
+    public int startingRow = 17;
+    public int startingColumb = 14;
 
     int currentRow;
     int currentColumb;
@@ -49,12 +49,15 @@ public class PacMan_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Horizontal") <= deadzone)
+
+        Debug.Log(walls.grid[currentRow, currentColumb]);
+
+        if (Input.GetAxis("Horizontal") <= -deadzone)
         {
             moveDirection = moveDir.LEFT;
         }
         
-        if (Input.GetAxis("Horizontal") >= -deadzone)
+        if (Input.GetAxis("Horizontal") >= deadzone)
         {
             moveDirection = moveDir.RIGHT;
         }

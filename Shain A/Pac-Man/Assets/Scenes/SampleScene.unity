@@ -236,7 +236,7 @@ MonoBehaviour:
     type: 3}
   width: 36
   height: 30
-  debugIt: 0
+  debugIt: 1
 --- !u!4 &126681350
 Transform:
   m_ObjectHideFlags: 0
@@ -11265,4 +11265,6 @@ MonoBehaviour:
   walls: {fileID: 126681349}
   tForm: {fileID: 1951427175}
   deadzone: 0.5
+  startingRow: 18
+  startingColumb: 14
   moveDirection: 3
