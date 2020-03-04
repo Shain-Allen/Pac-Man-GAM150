@@ -11,7 +11,7 @@ public class WallChecker : MonoBehaviour
     public int width = 26;
     public int height = 36;
     public bool debugIt = false;
-    Vector2 startingGridCord = new Vector2(-13.5f, 15.5f);
+    Vector2 startingGridCord = new Vector2(-14f, 16f);
     Vector2 currentGridCord;
 
     // Start is called before the first frame update
