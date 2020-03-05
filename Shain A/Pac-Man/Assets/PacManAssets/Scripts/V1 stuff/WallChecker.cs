@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class WallChecker : MonoBehaviour
 {
@@ -11,12 +12,19 @@ public class WallChecker : MonoBehaviour
     public int width = 26;
     public int height = 36;
     public bool debugIt = false;
-    Vector2 startingGridCord = new Vector2(-14f, 16f);
+    //public Transform topCorner;
+    Vector2 startingGridCord;
     Vector2 currentGridCord;
+    public Tilemap map;
 
     // Start is called before the first frame update
     void Start()
     {
+        width = map.size.x;
+        height = map.size.y;
+
+
+        //startingGridCord = map.GetTile(new Vector3Int(0, height, 0));
         grid = new Tiletype[width, height];
         currentGridCord = startingGridCord;
 
