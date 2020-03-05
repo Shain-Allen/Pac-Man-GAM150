@@ -12,19 +12,15 @@ public class WallChecker : MonoBehaviour
     public int width = 26;
     public int height = 36;
     public bool debugIt = false;
-    //public Transform topCorner;
+    public Transform topCorner;
     Vector2 startingGridCord;
     Vector2 currentGridCord;
-    public Tilemap map;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        width = map.size.x;
-        height = map.size.y;
-
-
-        //startingGridCord = map.GetTile(new Vector3Int(0, height, 0));
+        startingGridCord = topCorner.position;
         grid = new Tiletype[width, height];
         currentGridCord = startingGridCord;
 
@@ -32,7 +28,7 @@ public class WallChecker : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                if (Physics2D.OverlapCircle(currentGridCord, overlapCheckRadius))
+                if (Physics2D.OverlapCircle(currentGridCord, overlapCheckRadius, LayerMask.GetMask("Map")))
                 {
                     grid[i, j] = Tiletype.illegal;
                     if (debugIt == true)
