@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7963826497911587028}
   - component: {fileID: 5401657110310231284}
-  - component: {fileID: -8275171582323330550}
   - component: {fileID: -6598137269257747309}
+  - component: {fileID: -5562337198973314026}
   m_Layer: 0
   m_Name: WallChecker
   m_TagString: Untagged
@@ -83,7 +83,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &-8275171582323330550
+--- !u!114 &-6598137269257747309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4926737173269794887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0267d7e40b776b7409ebd7b09e82b7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColiding: 0
+--- !u!58 &-5562337198973314026
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,15 +112,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.08
---- !u!114 &-6598137269257747309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4926737173269794887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0267d7e40b776b7409ebd7b09e82b7bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

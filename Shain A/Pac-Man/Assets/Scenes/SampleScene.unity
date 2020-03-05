@@ -12339,12 +12339,12 @@ PrefabInstance:
     - target: {fileID: 4926737173269794887, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_Name
-      value: WallCheckerBottom
+      value: WallCheckerBR
       objectReference: {fileID: 0}
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
@@ -12420,7 +12420,7 @@ PrefabInstance:
     - target: {fileID: 4926737173269794887, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_Name
-      value: WallCheckerRight
+      value: WallCheckerTR
       objectReference: {fileID: 0}
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
@@ -12430,7 +12430,7 @@ PrefabInstance:
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
@@ -12450,12 +12450,12 @@ PrefabInstance:
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
@@ -12475,7 +12475,7 @@ PrefabInstance:
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8d0679470be09e40b2eb5ae846f9292, type: 3}
@@ -12545,7 +12545,7 @@ PrefabInstance:
     - target: {fileID: 4926737173269794887, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_Name
-      value: WallCheckerLeft
+      value: WallCheckerBL
       objectReference: {fileID: 0}
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
@@ -12555,7 +12555,7 @@ PrefabInstance:
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
@@ -12575,12 +12575,12 @@ PrefabInstance:
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
@@ -12600,7 +12600,7 @@ PrefabInstance:
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8d0679470be09e40b2eb5ae846f9292, type: 3}
@@ -12628,6 +12628,7 @@ GameObject:
   - component: {fileID: 1951427174}
   - component: {fileID: 1951427173}
   - component: {fileID: 1951427178}
+  - component: {fileID: 1951427179}
   - component: {fileID: 1951427177}
   - component: {fileID: 1951427176}
   m_Layer: 0
@@ -12738,13 +12739,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1951427178}
-  bc: {fileID: 1951427177}
   moveSpeed: 8
   deadzone: 0.1
-  wallCheckerLeft: {fileID: 1782664666}
-  wallCheckerRight: {fileID: 1402720787}
-  wallCheckerTop: {fileID: 7733922490505254824}
-  wallCheckerBottom: {fileID: 1318545566}
+  wallCheckerTL: {fileID: 7733922490505254824}
+  wallCheckerTR: {fileID: 1402720787}
+  wallCheckerBR: {fileID: 1318545566}
+  wallCheckerBL: {fileID: 1782664666}
   moveDirection: 3
 --- !u!61 &1951427177
 BoxCollider2D:
@@ -12753,7 +12753,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951427172}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -12770,7 +12770,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.6}
+  m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
 --- !u!50 &1951427178
 Rigidbody2D:
@@ -12793,6 +12793,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &1951427179
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951427172}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4
 --- !u!1001 &7733922490505254823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12803,12 +12819,12 @@ PrefabInstance:
     - target: {fileID: 4926737173269794887, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_Name
-      value: WallCheckerTop
+      value: WallCheckerTL
       objectReference: {fileID: 0}
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7963826497911587028, guid: d8d0679470be09e40b2eb5ae846f9292,
         type: 3}

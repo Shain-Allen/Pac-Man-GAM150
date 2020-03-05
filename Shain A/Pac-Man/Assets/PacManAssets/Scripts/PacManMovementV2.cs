@@ -5,13 +5,12 @@ using UnityEngine;
 public class PacManMovementV2 : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public BoxCollider2D bc;
     public float moveSpeed = 1;
     public float deadzone = 0.1f;
-    public WallCheckV2 wallCheckerLeft;
-    public WallCheckV2 wallCheckerRight;
-    public WallCheckV2 wallCheckerTop;
-    public WallCheckV2 wallCheckerBottom;
+    public WallCheckV2 wallCheckerTL;
+    public WallCheckV2 wallCheckerTR;
+    public WallCheckV2 wallCheckerBR;
+    public WallCheckV2 wallCheckerBL;
 
     public enum moveDir { UP, DOWN, RIGHT, LEFT };
     public moveDir moveDirection = moveDir.LEFT;
@@ -27,25 +26,25 @@ public class PacManMovementV2 : MonoBehaviour
     {
         if (Input.GetAxis("Horizontal") <= -deadzone)
         {
-            if (wallCheckerLeft)
+            if (wallCheckerBL & wallCheckerTL)
                 moveDirection = moveDir.LEFT;
         }
 
         if (Input.GetAxis("Horizontal") >= deadzone)
         {
-            if (wallCheckerRight)
+            if (wallCheckerBR & wallCheckerTR)
                 moveDirection = moveDir.RIGHT;
         }
 
         if (Input.GetAxis("Vertical") >= deadzone)
         {
-            if (wallCheckerTop)
+            if (wallCheckerTR & wallCheckerTL)
                 moveDirection = moveDir.UP;
         }
 
         if (Input.GetAxis("Vertical") <= -deadzone)
         {
-            if (wallCheckerBottom)
+            if (wallCheckerBR & wallCheckerBL)
                 moveDirection = moveDir.DOWN;
         }
     }
