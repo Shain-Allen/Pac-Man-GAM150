@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class WallCheckV2 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool isColiding;
+    CircleCollider2D cc;
+
+    private void Start()
     {
-        
+        cc = GetComponent<CircleCollider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if(other.name == "MazeMap")
+        {
+            isColiding = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.name == "MazeMap")
+        {
+            isColiding = false;
+        }
     }
 }
