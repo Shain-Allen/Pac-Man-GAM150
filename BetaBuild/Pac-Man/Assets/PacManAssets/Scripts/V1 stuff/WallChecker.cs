@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class WallChecker : MonoBehaviour
 {
-    public enum Tiletype { illegal, legale };
+    public enum Tiletype { illegal, legale, NPELLET, PPELLET };
     public Tiletype[,] grid;
     public float overlapCheckRadius = 1.0f;
     public GameObject debugsquare;
@@ -13,6 +13,8 @@ public class WallChecker : MonoBehaviour
     public int height = 36;
     public bool debugIt = false;
     public Transform topCorner;
+    public GameObject nPellet;
+    public GameObject pPellet;
     Vector2 startingGridCord;
     Vector2 currentGridCord;
     
@@ -34,21 +36,19 @@ public class WallChecker : MonoBehaviour
                     if (debugIt == true)
                         Instantiate(debugsquare, currentGridCord, Quaternion.identity);
                 }
+                else if (Physics2D.OverlapCircle(currentGridCord, overlapCheckRadius, LayerMask.GetMask("Pellets")))
+                {
+                    grid[i, j] = Tiletype.NPELLET;
+                    Instantiate(nPellet, currentGridCord, Quaternion.identity);
+                }
                 else
                 {
                     grid[i, j] = Tiletype.legale;
                 }
-
                 currentGridCord.x += 1.0f;
             }
             currentGridCord.y += -1.0f;
             currentGridCord.x = startingGridCord.x;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
